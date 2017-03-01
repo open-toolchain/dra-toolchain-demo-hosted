@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "localized-struct": {
-        "$ref": "github-localized-struct.json"
+        "$ref": "git-localized-struct.json"
     },
     "title": "Microservices deployment stage",
-    "description": "Feb Demo Microservices GitHub Schema",
-    "longDescription": "With GitHub, you can store your source code in a new or an existing GitHub repository.",
+    "description": "Feb Demo Microservices Git Schema",
+    "longDescription": "With git, you can store your source code in a new or an existing GitHub repository.",
     "type": "object",
     "properties": {
         "demodra-repo_name": {

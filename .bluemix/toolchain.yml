@@ -27,16 +27,16 @@ template:
     - demodra-repo
   info:
     git url: >-
-      [https://github.com/open-toolchain/dra-toolchain-demo](https://github.com/open-toolchain/dra-toolchain-demo)
-    git branch: '[master](https://github.com/open-toolchain/dra-toolchain-demo/tree/master)'
+      [https://github.com/open-toolchain/dra-toolchain-demo-hosted](https://github.com/open-toolchain/dra-toolchain-demo-hosted)
+    git branch: '[master](https://github.com/open-toolchain/dra-toolchain-demo-hosted/tree/master)'
 toolchain:
-  name: 'devops-insights-{{timestamp}}'
+  name: 'devops-insights-hosted-{{timestamp}}'
 services:
   demodra-repo:
-    service_id: githubpublic
+    service_id: hostedgit
     parameters:
-      repo_name: '{{form.githubpublic.parameters.demodra-repo_name}}'
-      repo_url: '{{form.githubpublic.parameters.demodra-repo_url}}'
+      repo_name: '{{form.hostedgit.parameters.demodra-repo_name}}'
+      repo_url: '{{form.hostedgit.parameters.demodra-repo_url}}'
       type: clone
       has_issues: true
   demodra-build:
@@ -73,9 +73,9 @@ form:
       demodra-app-name: '{{services.demodra-repo.parameters.repo_name}}'
     schema:
       $ref: deploy.json
-  githubpublic:
+  hostedgit:
     parameters:
       demodra-repo_name: '{{toolchain.name}}'
       demodra-repo_url: 'https://github.com/open-toolchain/DemoDRA'
     schema:
-      $ref: github.json
+      $ref: git.json

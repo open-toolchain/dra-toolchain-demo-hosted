@@ -1,7 +1,7 @@
 {
-    "title": "$github.title",
-    "description": "$github.description",
-    "longDescription": "$github.longDescription",
+    "title": "$form.hostedgit.schema.title",
+    "description": "$form.hostedgit.schema.description",
+    "longDescription": "$form.hostedgit.schema.longDescription",
     "properties": {
     },
     "form": [
@@ -10,12 +10,12 @@
       {
         "items": [
             {
-              "title": "$github.sourceRepository"
+              "title": "$form.hostedgit.schema.sourceRepository"
             },
             {
             },
             {
-              "title": "$github.targetRepository"
+              "title": "$form.hostedgit.schema.targetRepository"
             },
             {
             },
